@@ -1,3 +1,29 @@
+h1 {
+    /* CSS comment */
+    /* color: red; */
+    /* color: rgb(255, 0, 0); */
+    color: #ff0000;
+
+    text-align: center;
+
+    /* background --> Longhand notation */
+    /* background-color: #00ff00; */
+    /* background-image: url("../images/hello_world.png"); */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: width height; */
+    /* background-size: 200px 100px; */
+    /* background-size: auto; */
+    /* Responsive --> background-size: num% num% */
+    /* background-size: 100% 100%; */
+    
+    /* background --> Shorthand notation */
+    background: #00ff00 url("../images/hello_world.png") center no-repeat;
+    background-size: 100% 100%;
+
+    height: 200px;
+}
+
 body {
     background-color: lightgray;
 }
