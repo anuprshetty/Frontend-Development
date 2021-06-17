@@ -1,4 +1,10 @@
-h1 {
+/* CSS Class selector */
+.myMessage{
+    background-color: yellow;
+}
+
+/* CSS ID selector */
+#myHeader {
     /* CSS comment */
     /* color: red; */
     /* color: rgb(255, 0, 0); */
@@ -19,9 +25,14 @@ h1 {
     
     /* background --> Shorthand notation */
     background: #00ff00 url("../images/hello_world.png") center no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 
     height: 200px;
+}
+
+/* CSS Tag selector */
+h1{
+    background-color: green;
 }
 
 body {
