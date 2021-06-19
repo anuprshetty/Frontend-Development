@@ -1,3 +1,7 @@
+body {
+    background-color: lightgray;
+}
+
 /* CSS Class selector */
 .myMessage{
     background-color: yellow;
@@ -35,8 +39,48 @@ h1{
     background-color: green;
 }
 
-body {
-    background-color: lightgray;
+/* CSS box model for an HTML element
+    Components of box model of an element --> content, padding, border, margin */
+.myBox p {
+    /* padding --> Clockwise starting from top */
+    /* padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px; */
+    padding: 5px 10px 15px 20px;
+
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: red; */
+    border: 1px solid red;
+
+    /* margin --> Clockwise starting from top */
+    /* margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px; */
+    margin: 5px 10px 15px 20px;
+
+    background-color: lightseagreen;
+}
+
+/* CSS pseudo class --> :keyword */
+.myBox p:hover {
+    padding: 5px 10px 15px 20px;
+    border: 1px solid blue;
+    margin: 5px 10px 15px 20px;
+    background-color: yellowgreen;
+}
+
+/* CSS pseudo element --> ::keyword */
+.myBox p::after{
+    content: "PARAGRAPH END";
+    background-color: yellow;
+}
+
+/* CSS pseudo class and pseudo element combined */
+.myBox p:first-child::first-line{
+    font-weight: bold;
 }
 
 th, td {
