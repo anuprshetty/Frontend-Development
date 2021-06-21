@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="wrapper">
         <header id="myHeader">
             <h1>Hello World!</h1>
             <p>Gateway to programming</p>
@@ -29,53 +29,60 @@
                 <li><a href="pages/feedback.html">Give Feedback</a></li>
             </ul>
         </nav>
-        <h3>CSS box model</h3>
-        <img src="images/css_box_model.PNG" />
-        <ul>
-            <li>Technology</li>
-            <li>Photography</li>
-        </ul>
-        <ol type="A" start="3">
-            <li>Nature</li>
-            <li>Imagination</li>
-        </ol>
-        <article>
-            <div class="myBox">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-            <div class="myBox">
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div class="myBox">
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-            </div>
-            <p class="myMessage">I am glad to see you</p>
-            <p class="myMessage">Have a great day</p>
-            <aside>
-                <h3 class="myMessage">Learn something new everyday</h3>
+        <section id="myContainer">
+            <aside id="sideMenu">
+                <h2>Side Menu</h2>
             </aside>
-        </article>
-        <table border="1">
-            <tr>
-                <th>Key</th>
-                <th>Value</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>A</td>
-                <td>1</td>
-                <td rowspan="2">First</td>
-            </tr>
-            <tr>
-                <td>B</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>C</td>
-                <td colspan="2">3</td>
-            </tr>
-        </table>
-        <footer>
+            <article id="myContent">
+                <div class="myBox">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+                <div class="myBox">
+                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="myBox">
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <p class="myMessage">I am glad to see you</p>
+                <p class="myMessage">Have a great day</p>
+                <aside>
+                    <h3 class="myMessage">Learn something new everyday</h3>
+                </aside>
+                <div>
+                    <h3>CSS box model</h3>
+                    <img src="images/css_box_model.PNG" />
+                </div>
+                <ul>
+                    <li>Technology</li>
+                    <li>Photography</li>
+                </ul>
+                <ol type="A" start="3">
+                    <li>Nature</li>
+                    <li>Imagination</li>
+                </ol>
+                <table border="1">
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>1</td>
+                        <td rowspan="2">First</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td colspan="2">3</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <footer id="myFooter" class="clear">
             <h4>Copyright information</h4>
         </footer>
     </div>

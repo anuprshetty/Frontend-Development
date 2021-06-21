@@ -1,5 +1,12 @@
+/* CSS is designed primarily to enable the separation of document content from document presentation, including aspects such as the layout, colors, and fonts. */
+
+/* Importing Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
 body {
     background-color: lightgray;
+    /* Using Google fonts */
+    font-family: 'Viaoda Libre', cursive;
 }
 
 /* CSS Class selector */
@@ -83,6 +90,11 @@ h1{
     font-weight: bold;
 }
 
+#wrapper{
+    max-width: 1140px;
+    margin: auto;
+}
+
 #myNav{
     background-color: #333;
     color: #efefef;
@@ -117,7 +129,82 @@ h1{
     color: #fff;
 }
 
+#myContainer{
+    background-color: #999;
+    min-height: 100%;
+}
+
+#sideMenu{
+    float: left;
+    width: 28%;
+    padding: 1%;
+}
+
+#sideMenu h2{
+    text-align: center;
+}
+
+#myContent{
+    float: left;
+    width: 68%;
+    padding: 1%;
+    background-color: #fff;
+}
+
+.clear{
+    clear: both;
+}
+
+#myFooter{
+    background-color: #000;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+
 th, td {
     padding: 10px;
     min-width: 100px;
+}
+
+/* Responsive CSS website */
+/* Media queries is a feature of CSS 3 allowing content rendering to adapt to different conditions such as screen resolution. */
+@media screen and (max-width:615px){
+    /* Add different constomizations */
+    body{
+        background-color: blue;
+    }
+    #myNav {
+        margin: 0;
+    }
+    #myNav ul li {
+        width: 25%;
+    }
+    #myNav ul li a {
+        width: 95%;
+        padding: 2px;
+        height: 35px;
+    }
+    #sideMenu {
+        float: none;
+        width: 100%;
+        padding: 0;
+        height: auto;
+    }
+    #sideMenu h1 {
+        margin: 0;
+    }
+    #myContent {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    th, td {
+        padding: 0px;
+        min-width: auto;
+    }
 }
