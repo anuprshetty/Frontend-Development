@@ -10,6 +10,17 @@
         body {
             background-color: black;
         }
+        .btn{
+        padding: 10px;
+        border: 1px solid yellow;
+        display: inline-block;
+        }
+        #btn1{
+            background-color: aqua;
+        }
+        #btn2{
+            background-color: lightblue;
+        }
     </style>
     <script>
         alert("About Me");
@@ -20,5 +31,61 @@
 <body>
     <!-- Inline CSS and JavaScript -->
     <p style="color: red;" onclick="javascript:alert('Anup Shetty');">Anup Shetty</p>
+    <div id="btn1" class="btn">Click me</div>
+    <div id="btn2" class="btn">Click me</div>
+    <script>
+        // Accessing HTML DOM from JS.
+
+        console.log("getElementById");
+        var myBtn1 = document.getElementById("btn1"); 
+        // myBtn1 is a JS object.
+        console.log(myBtn1); // prints HTML element.
+        console.dir(myBtn1); // prints HTML element properties.
+        // Modifying HTML element property.
+        myBtn1.innerHTML = "Modified <br> button 1"; // interpreted as HTML.
+        // JS events
+        myBtn1.onclick = function(){
+            myBtn1.innerHTML = "Button 1 clicked";
+            myBtn1.style.backgroundColor = "green";
+        }
+        var myBtn2 = document.getElementById("btn2"); 
+        console.log(myBtn2); 
+        console.dir(myBtn2); 
+        myBtn2.innerText = "Modified <br> button 2"; // interpreted as plain text.
+        // Modifying CSS style property.
+        myBtn2.style.backgroundColor = "red";
+        // JS events
+        myBtn2.addEventListener("click", function(e){
+            myBtn2.innerHTML = "Button 2 clicked";
+            myBtn2.style.backgroundColor = "green";
+            console.log(e);
+        });
+
+        console.log("getElementsByClassName");
+        var myBtns = document.getElementsByClassName("btn");
+        console.log(myBtns);
+        console.dir(myBtns);
+        console.log(myBtns[0]); 
+        console.dir(myBtns[1]);
+
+        console.log("getElementsByTagName");
+        var myTags = document.getElementsByTagName("div");
+        console.log(myTags);
+        console.dir(myTags);
+        console.log(myTags[0]); 
+        console.dir(myTags[1]);
+
+        console.log("querySelectorAll"); // returns all elements in HTML DOM.
+        var mySelectors = document.querySelectorAll("div.btn");
+        console.log(mySelectors);
+        console.dir(mySelectors);
+        console.log(mySelectors[0]); 
+        console.dir(mySelectors[1]);
+
+        console.log("querySelector"); // returns first element in HTML DOM.
+        var mySelector = document.querySelector("div.btn");
+        console.log(mySelector);
+        console.dir(mySelector);
+    </script>
 </body>
 </html>
