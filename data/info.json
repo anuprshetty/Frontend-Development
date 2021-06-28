@@ -1,0 +1,15 @@
+{
+    "_id": "60da00e49930a0b931597f82",
+    "index": 0,
+    "guid": "be7c7d6d-1af8-41a1-86f8-470bd0c12a1a",
+    "isActive": false,
+    "balance": "$3,992.25",
+    "picture": "http://placehold.it/32x32",
+    "age": 34,
+    "eyeColor": "green",
+    "name": "Levine Mendez",
+    "gender": "male",
+    "company": "ZILLIDIUM",
+    "email": "levinemendez@zillidium.com",
+    "phone": "+1 (909) 549-2627"
+}

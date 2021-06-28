@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>AJAX</title>
+    </head>
+    <body>
+        <!-- AJAX = Asynchronous JavaScript And XML.
+            Ajax is a set of web development techniques using many web technologies on the client-side to create asynchronous web applications. With Ajax, web applications can send and retrieve data from a server asynchronously without interfering with the display and behaviour of the existing page. -->
+        <div id="myOutput">Nothing</div>
+        <button id="myBtn">Click here</button>
+        <button id="myBtn2">Clear</button>
+        <script>
+            var btn = document.getElementById("myBtn");
+            btn.addEventListener("click", function(){
+                var myRequest = new XMLHttpRequest();
+                myRequest.open("GET", "../data/info.json", async=true);
+                myRequest.onreadystatechange = function(){
+                    if(myRequest.status == 200){
+                        var myObj = JSON.parse(this.responseText);
+                        document.getElementById("myOutput").innerHTML = myObj.name + " " + myObj.email + " " + myObj.phone;
+                    }
+                }
+                myRequest.send();
+            });
+
+            var btn2 = document.getElementById("myBtn2");
+            btn2.addEventListener("click", function(){
+                document.getElementById("myOutput").innerHTML = "Clear";
+            });
+        </script>
+    </body>
+</html>
