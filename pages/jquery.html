@@ -4,9 +4,52 @@
         <title>JQuery</title>
     </head>
     <body>
+        <div id="hello">Hello World!</div>
+        <div class="content">Content 1</div>
+        <div class="content">Content 2</div>
+        <div class="content">Content 3</div>
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <p>Para 3</p>
+        <ul>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+        </ul>
+        <!-- JQuery: jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. -->
         <script type="application/javascript" src="../scripts/jquery/jquery-3.6.0.js"></script>
         <script type="application/javascript">
-            
+            if(jQuery){
+                console.log("JQuery is available");
+            }
+            else{
+                console.log("JQuery is not available");
+            }
+
+            // $ --> JQuery object.
+
+            // Once the HTML DOM is ready
+            $(document).ready(function(){
+                // .innerHTML --> .html()
+                // .innerText --> .text()
+                // .value --> .val()
+
+                // .innerHTML
+                var output = $("#hello").html();
+                console.log(output);
+                // .innerHTML = "Welcome <br> Nice to meet you.";
+                $("#hello").html("Welcome <br> Nice to meet you.");
+
+                $(".content").html("Content N");
+
+                $("p").html("Para N");
+
+                $("li").each(function(index, event){
+                    console.log(index);
+                    console.log(event);
+                    console.log($(this).text());
+                });
+            });
         </script>
     </body>
 </html>
