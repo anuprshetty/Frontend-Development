@@ -2,6 +2,12 @@
 <html>
     <head>
         <title>JQuery</title>
+        <style>
+            .myClass{
+                background-color: green;
+                color: yellow;
+            }
+        </style>
     </head>
     <body>
         <div id="hello">Hello World!</div>
@@ -16,6 +22,16 @@
             <li>List 2</li>
             <li>List 3</li>
         </ul>
+        <h1 id="magic">Magic!</h1>
+        <button id="btn1">Show</button>
+        <button id="btn2">Hide</button>
+
+        <div>
+            <h1 id="bulb">Bulb</h1>
+            <button id="state">OFF</button>
+            <h3 id="output">.</h3>
+        </div>
+
         <!-- JQuery: jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. -->
         <script type="application/javascript" src="../scripts/jquery/jquery-3.6.0.js"></script>
         <script type="application/javascript">
@@ -48,6 +64,52 @@
                     console.log(index);
                     console.log(event);
                     console.log($(this).text());
+                });
+                
+                // JS events
+                // Short-hand notation
+                $("p").click(function(event){
+                    console.log(event);
+                    $(this).append(" * ");
+                });
+                // Long-hand notation
+                $("p").on("click", function(event){
+                    console.log(event);
+                    $(this).prepend(" * ");
+                });
+
+                //.find()
+                $("ul").find("li").each(function(index, event){
+                    console.log(index);
+                    console.log(event);
+                });
+
+                // CSS styling
+                $("li").css("color", "red");
+                $("p").addClass("myClass");
+
+                // Effects and Animations.
+                $("#btn1").click(function(){
+                    $("#magic").show(1000);
+                });
+                $("#btn2").click(function(){
+                    $("#magic").hide(1000);
+                });
+
+                // Callback function
+                /* In computer programming, a callback, also known as a "call-after" function, is any executable code that is passed as an argument to other code; that other code is expected to call back the argument at a given time. */
+                function myCallback(){
+                    if($("#state").text() == "OFF"){
+                        $("#state").text("ON");
+                        $("#output").text(".");
+                    }
+                    else{
+                        $("#state").text("OFF");
+                        $("#output").text("Bulb is working fine!");
+                    }
+                }
+                $("#state").click(function(){
+                    $("#bulb").toggle(2000, myCallback);
                 });
             });
         </script>
